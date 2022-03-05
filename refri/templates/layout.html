@@ -1,0 +1,171 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Refri</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="{% static "assets/img/favicon.png" %}">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="{% static "assets/css/all.min.css" %}">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="{% static "assets/bootstrap/css/bootstrap.min.css"%}">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="{% static "assets/css/owl.carousel.css"%}">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="{% static "assets/css/magnific-popup.css"%}">
+	<!-- animate css -->
+	<link rel="stylesheet" href="{% static "assets/css/animate.css"%}">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="{% static "assets/css/meanmenu.min.css"%}">
+	<!-- main style -->
+	<link rel="stylesheet" href="{% static "assets/css/main.css"%}">
+	<!-- responsive -->
+	<link rel="stylesheet" href="{% static "assets/css/responsive.css"%}">
+
+
+
+</head>
+<body>
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+
+<!--PreLoader-->
+<div class="loader">
+    <div class="loader-inner">
+        <div class="circle"></div>
+    </div>
+</div>
+<!--PreLoader Ends-->
+
+<!-- header -->
+<div class="top-header-area" id="sticker">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 text-center">
+                <div class="main-menu-wrap">
+                    <!-- logo -->
+                    <div class="site-logo">
+                        <a href=" ">
+                            <img src="{% static "assets/img/logo.png" %}" alt="">
+                        </a>
+                    </div>
+                    <!-- logo -->
+
+                    <!-- menu start -->
+                    <nav class="main-menu">
+                        <ul>
+                            <li class="current-list-item"><a href=" ">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">What's In My Refrigerator?</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Ingredient List</a></li>
+                                    <li><a href="#">Update</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Recipe</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Matched Recipe</a></li>
+                                    <li><a href="#">My Recipe</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">My Profile</a>
+                                <ul class="sub-menu">
+                                    <li><a href="/accounts/edit">Update</a></li>
+                                    <li><a href="/accounts/logout">Logout</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="header-icons">
+                                    <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+                    <div class="mobile-menu"></div>
+                    <!-- menu end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end header -->
+
+<!-- search area -->
+<div class="search-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <span class="close-btn"><i class="fas fa-window-close"></i></span>
+                <div class="search-bar">
+                    <div class="search-bar-tablecell">
+                        <h3>Search For:</h3>
+                        <input type="text" placeholder="Keywords">
+                        <button type="submit">Search <i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end search area -->
+
+{% block content %}
+{% endblock %}
+
+<!-- copyright -->
+<div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <p>Copyrights &copy; 2022 - <a href="#">Young Song</a>, All Rights Reserved.</p>
+            </div>
+            <div class="col-lg-6 text-right col-md-12">
+                <div class="social-icons">
+                    <ul>
+                        <li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end copyright -->
+
+	<!-- jquery -->
+	<script src="{% static "assets/js/jquery-1.11.3.min.js"%}"></script>
+	<!-- bootstrap -->
+	<script src="{% static "assets/bootstrap/js/bootstrap.min.js" %}"></script>
+	<!-- count down -->
+	<script src="{% static "assets/js/jquery.countdown.js" %}"></script>
+	<!-- isotope -->
+	<script src="{% static "assets/js/jquery.isotope-3.0.6.min.js" %}"></script>
+	<!-- waypoints -->
+	<script src="{% static "assets/js/waypoints.js" %}"></script>
+	<!-- owl carousel -->
+	<script src="{% static "assets/js/owl.carousel.min.js" %}"></script>
+	<!-- magnific popup -->
+	<script src="{% static "assets/js/jquery.magnific-popup.min.js" %}"></script>
+	<!-- mean menu -->
+	<script src="{% static "assets/js/jquery.meanmenu.min.js" %}"></script>
+	<!-- sticker js -->
+	<script src="{% static "assets/js/sticker.js" %}"></script>
+	<!-- main js -->
+	<script src="{% static "assets/js/main.js"%}"></script>
+
+
+</body>
+</html>
